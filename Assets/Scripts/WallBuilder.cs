@@ -28,7 +28,7 @@ public class WallBuilder : MonoBehaviour
         _wall = Instantiate(_wallPrefab);
     }
 
-    private void DestroyWall()
+    public void DestroyWall()
     {
         if (_wall != null)
             Destroy(_wall.gameObject);

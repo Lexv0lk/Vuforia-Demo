@@ -3,8 +3,8 @@
 public class Target : MonoBehaviour
 {
     public Transform Center => _center;
-    public DefaultTrackableEventHandler DefaultTrackableEventHandler => _defaultTrackableEventHandler;
+    public TargetTrackableEventHandler TargetTrackableEventHandler => _targetTrackableEventHandler;
 
     [SerializeField] private Transform _center;
-    [SerializeField] private DefaultTrackableEventHandler _defaultTrackableEventHandler;
+    [SerializeField] private TargetTrackableEventHandler _targetTrackableEventHandler;
 }

@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5187363462278109577}
   - component: {fileID: 5695429122188494243}
-  - component: {fileID: 5303577106672271084}
   - component: {fileID: 8383512181253712924}
   - component: {fileID: 2661808582562157025}
   - component: {fileID: 4208218585044052637}
   - component: {fileID: 1293163165475858383}
+  - component: {fileID: 5911332100355166365}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -59,29 +59,6 @@ MonoBehaviour:
   mWidth: 1
   mHeight: 1
   mRuntimeTexture: {fileID: 0}
---- !u!114 &5303577106672271084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7420810355122129391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatusFilter: 1
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!114 &8383512181253712924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +130,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _center: {fileID: 1737056374677343760}
-  _defaultTrackableEventHandler: {fileID: 5303577106672271084}
+  _targetTrackableEventHandler: {fileID: 5911332100355166365}
+--- !u!114 &5911332100355166365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7420810355122129391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e133b0e2f7fea44beff72a7678ea35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _maximalMoveDelta: 0.03
 --- !u!1 &7766573879154984522
 GameObject:
   m_ObjectHideFlags: 0
