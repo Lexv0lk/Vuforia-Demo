@@ -529,6 +529,8 @@ GameObject:
   - component: {fileID: 325507619}
   - component: {fileID: 325507625}
   - component: {fileID: 325507624}
+  - component: {fileID: 325507627}
+  - component: {fileID: 325507626}
   m_Layer: 0
   m_Name: ARCamera
   m_TagString: MainCamera
@@ -560,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: -1826476478, guid: bab6fa851cf5a1a4bba3cec5f191cb8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mWorldCenterMode: 2
+  mWorldCenterMode: 1
   mWorldCenter: {fileID: 0}
 --- !u!81 &325507621
 AudioListener:
@@ -658,6 +660,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wallPrefab: {fileID: 4272891180909441600, guid: e4a5751830a16644c801856d300715be,
     type: 3}
+--- !u!114 &325507626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325507618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d108711fa1d9040bf4493a51bff008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _wallDestroyer: {fileID: 325507627}
+--- !u!114 &325507627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325507618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d820c6bc8d22a64084327cb2eebbb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _blowRadius: 0.15
+  _blowForce: 3
 --- !u!43 &630378190
 Mesh:
   m_ObjectHideFlags: 0

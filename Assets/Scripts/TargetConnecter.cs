@@ -48,7 +48,6 @@ public class TargetConnecter : MonoBehaviour
 
     private void OnTargetMoved(Target target)
     {
-        Debug.LogWarning("Moved");
         if (_connectedTargets.Contains(target) == false)
             return;
         ReconnectTargets();
