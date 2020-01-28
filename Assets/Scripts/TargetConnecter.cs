@@ -24,21 +24,17 @@ public class TargetConnecter : MonoBehaviour
         if (_foundTargets.Count <= 1)
             return;
         _foundTargets = _foundTargets.OrderBy(x => GetDistance(x.transform.position)).ToList();
-        _wallBuilder.SetWall(_foundTargets[0], _foundTargets[1]);
+        _wallBuilder.BuildWall(_foundTargets[0], _foundTargets[1]);
     }
 
     private void OnTargetFound(Target target)
     {
         _foundTargets.Add(target);
-        if (_foundTargets.Count >= 2)
-            _wallBuilder.EnableWall();
     }
 
     private void OnTargetLost(Target target)
     {
         _foundTargets.Remove(target);
-        if (_foundTargets.Count <= 1)
-            _wallBuilder.DisableWall();
     }
 
     private float GetDistance(Vector3 to)
