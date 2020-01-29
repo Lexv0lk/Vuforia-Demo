@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class Destroyable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public UnityAction OnExploded;
 
-    // Update is called once per frame
-    void Update()
+    private Rigidbody _rigidbody;
+
+    public void Explode(float explositonForce, Vector3 explosionPosition, float explosionRadius)
     {
-        
+        if (_rigidbody == null)
+            _rigidbody = gameObject.AddComponent<Rigidbody>();
+        _rigidbody.AddExplosionForce(explositonForce, explosionPosition, explosionRadius);
+        OnExploded?.Invoke();
     }
 }

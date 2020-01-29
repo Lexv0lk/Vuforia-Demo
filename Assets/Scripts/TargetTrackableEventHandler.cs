@@ -4,26 +4,25 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Target))]
 public class TargetTrackableEventHandler : DefaultTrackableEventHandler
 {
-    [SerializeField] private float _maximalMoveDelta;
-
     public UnityAction<Target> OnTargetMoved;
     public new UnityAction<Target> OnTargetFound;
     public new UnityAction<Target> OnTargetLost;
 
     private Target _target;
-    private Vector3 _lastPosition;
 
     private void Awake()
     {
-        _lastPosition = transform.position;
         _target = GetComponent<Target>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Vector3.Distance(_lastPosition, transform.position) > _maximalMoveDelta)
-            OnMoved();
-        _lastPosition = transform.position;
+        _target.OnMoved += OnMoved; 
+    }
+
+    private void OnDisable()
+    {
+        _target.OnMoved -= OnMoved;
     }
 
     protected override void OnTrackingFound()

@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _center: {fileID: 1737056374677343760}
   _targetTrackableEventHandler: {fileID: 5911332100355166365}
+  _maximalMoveDelta: 0.15
 --- !u!114 &5911332100355166365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +155,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  _maximalMoveDelta: 0.03
 --- !u!1 &7766573879154984522
 GameObject:
   m_ObjectHideFlags: 0
